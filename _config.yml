@@ -2,8 +2,8 @@ theme: jekyll-theme-lanyon
 title: hfly2019 的主页
 description: 欢迎来到我的个人网站
 
-# 博客配置
-permalink: /posts/:title/
+# 博客配置 - 使用日期格式 permalink（Lanyon 主题标准）
+permalink: /:year/:month/:day/:title/
 defaults:
   - scope:
       path: ""
