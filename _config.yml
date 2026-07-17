@@ -6,9 +6,7 @@ description: 欢迎来到我的个人网站
 permalink: /posts/:title/
 defaults:
   - scope:
-      path: "posts"
+      path: ""
       type: "posts"
     values:
       layout: post
-      _comments:
-        date: "自动生成"
