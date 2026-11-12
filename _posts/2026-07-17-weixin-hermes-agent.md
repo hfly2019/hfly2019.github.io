@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "微信（Weixin） | Hermes Agent"
+title: "微信（Weixin）× Hermes Agent 实战集成"
 date: 2026-07-17 12:00:00 +0800
-description: "通过 iLink Bot API 将 Hermes Agent 连接到个人微信账号"
+description: "通过 iLink Bot API 将 Hermes Agent 连接到个人微信账号的完整指南"
 tags:
-  - clippings
+  - AI Agent
+  - Hermes
+  - 自动化
 ---
 将 Hermes 连接到 [微信](https://weixin.qq.com/) （WeChat），腾讯的个人即时通讯平台。该适配器使用腾讯的 **iLink Bot API** 对接个人微信账号——与企业微信（WeCom）不同。消息通过长轮询（long-polling）方式传递，无需公网端点或 webhook。
 

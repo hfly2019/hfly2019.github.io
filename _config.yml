@@ -1,13 +1,29 @@
-# theme: jekyll-theme-lanyon
-remote_theme: poole/lanyon
-title: hfly2019 的主页
-description: 欢迎来到我的个人网站
+# Site settings
+title: HFly
+tagline: 数字游民 · 自动化与 AI Agent 探索者
+description: 记录数字游民生活、AI Agent 实践、自动化工具与自驾探索。
+url: "https://blog.nodehub.me"
+baseurl: ""
 
-# 博客配置 - 使用日期格式 permalink（Lanyon 主题标准）
+# Author
+author:
+  name: HFly
+  email: hfly2019@users.noreply.github.com
+  github: hfly2019
+
+# Theme configuration
+remote_theme: poole/lanyon
 permalink: /:year/:month/:day/:title/
+
+# Defaults
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
       layout: post
+
+# Markdown processor
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

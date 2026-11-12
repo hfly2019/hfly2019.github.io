@@ -1,15 +1,12 @@
 ---
 layout: post
-date: 2026-07-17
-title: "github博客绑定域名 | 笔记"
-source: "https://blog.xn--ug8h.eu.org/post/note/github%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"
-author:
-  - "[[Sliverkiss]]"
-published: 2023-11-25
-created: 2026-07-16
-description: "记录一次将github的静态博客绑定到自己的域名的过程"
+title: "GitHub 博客绑定自定义域名指北"
+date: 2026-07-16 12:00:00 +0800
+description: "记录将 GitHub 静态博客绑定到独立域名的完整流程与 DNS 配置"
 tags:
-  - "clippings"
+  - 博客搭建
+  - GitHub Pages
+  - 域名
 ---
 > “If you care about me at all, please don’t say anything to anyone. ”
 

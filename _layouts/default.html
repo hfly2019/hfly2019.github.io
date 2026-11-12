@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-CN">
 
   {% include head.html %}
 
@@ -7,42 +7,60 @@
 
     {% include sidebar.html %}
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.description }}</small>
-          </h3>
+      <header class="masthead">
+        <div class="container masthead-inner">
+          <div class="masthead-brand">
+            <a href="{{ site.baseurl }}/" class="site-title">{{ site.title }}</a>
+            <span class="site-status"><span class="status-dot"></span>Exploring</span>
+          </div>
+          <nav class="masthead-nav">
+            <a href="{{ site.baseurl }}/#articles">文章</a>
+            <a href="{{ site.baseurl }}/#projects">项目</a>
+            <a href="{{ site.baseurl }}/#about">关于</a>
+            <a href="https://github.com/hfly2019" target="_blank" rel="noopener" class="nav-gh">GitHub</a>
+          </nav>
         </div>
-      </div>
+      </header>
 
-      <div class="container content">
+      <main class="container content" id="main-content">
         {{ content }}
-      </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} · 数字游民 · 用代码探索边界</p>
+          <p class="footer-links">
+            <a href="https://github.com/hfly2019" target="_blank" rel="noopener">GitHub @hfly2019</a>
+            <span>&middot;</span>
+            <a href="https://blog.nodehub.me">blog.nodehub.me</a>
+          </p>
+        </div>
+      </footer>
     </div>
 
-    <label for="sidebar-checkbox" class="toggle"></label>
+    <label for="sidebar-checkbox" class="toggle" title="切换菜单" aria-label="切换侧边栏菜单"></label>
     <script>
       (function(document) {
         var toggle = document.querySelector('.toggle'),
-            sidebar = document.querySelector('.sidebar'),
             wrap = document.querySelector('.wrap');
 
-        toggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          // Toggle sidebar
-          document.getElementById('sidebar-checkbox').checked = !document.getElementById('sidebar-checkbox').checked;
-        });
+        if (toggle) {
+          toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            var chk = document.getElementById('sidebar-checkbox');
+            if (chk) chk.checked = !chk.checked;
+          });
+        }
 
-        //西服 fix: close sidebar when clicking outside on mobile
-        wrap.addEventListener('click', function(e) {
-          if (document.getElementById('sidebar-checkbox').checked && window.innerWidth < 768) {
-            document.getElementById('sidebar-checkbox').checked = false;
-          }
-        });
+        if (wrap) {
+          wrap.addEventListener('click', function(e) {
+            var chk = document.getElementById('sidebar-checkbox');
+            if (chk && chk.checked && window.innerWidth < 768) {
+              chk.checked = false;
+            }
+          });
+        }
       })(document);
     </script>
   </body>
